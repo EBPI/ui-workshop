@@ -2,6 +2,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import ListComponent from './components/ListComponent';
+import SpinnerComponent from "./components/SpinnerComponent";
+import ErrorComponent from "./components/ErrorComponent";
 
 class App extends Component {
   constructor(props) {
@@ -42,9 +44,9 @@ class App extends Component {
   render() {
     const {error, isLoaded, items} = this.state;
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return <ErrorComponent error = {error}/>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <SpinnerComponent text = "Loading Star Wars Data..."/>;
     } else {
       return <ListComponent data = {items} title = "A Sith Lord?"/>
     }

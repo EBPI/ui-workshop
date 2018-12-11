@@ -16,7 +16,10 @@
 //
 // Got extra time?
 // - make the list title flexible using a prop
-// - In ListItemComponent, make item mandatory using PropTypes.
+// - create a separate component for the "loading..." component
+// - display another item property in the list
+//
+// You can ignore the part of the code that fetches the data.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import React, {Component} from 'react';
 import './App.css';
