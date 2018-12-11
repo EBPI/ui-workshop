@@ -1,8 +1,7 @@
 import React from "react";
 
-import SelectComponent from "./SelectComponent";
-
 export default class FormComponent extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -11,41 +10,21 @@ export default class FormComponent extends React.Component {
     };
   }
 
-  /**
-   * Eventhandler is pulled up into a function.
-   * Remove arrow notation and watch it fail
-   */
-  handlePlanetChange = evt => {
-    this.setState({ planet: evt.target.value });
-  };
-
   render() {
     return (
       <section>
         <form>
           <label>
-            Planet:{" "}
-            <input
-              type="text"
-              value={this.state.planet}
-              onChange={this.handlePlanetChange}
-            />
+            Planet: <span>TODO replace me with an input of type 'text'</span>
           </label>
 
           <label>
-            Allegiance:
-            <SelectComponent
-              handleSelect={evt => {
-                // eventhandler is inlined in the attribute body
-                this.setState({ allegiance: evt.target.value });
-              }}
-            />
+            Allegiance: <span>TODO replace me with a 'select' wrapping 2 'option' elements</span>
           </label>
         </form>
 
         <div style={{ margin: "1em" }}>
-          You chose <em>{this.state.planet || "unknown"}</em>, which has allegiance to
-          the <em>{this.state.allegiance || "unknown"}</em>
+          TODO print your state and join the dark side!
         </div>
       </section>
     );
