@@ -1,25 +1,26 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Exercise:
 //
-// The App component below calls an external api to display a list of Siths.
+// The App component below calls an external api to display a list of Star Wars characters.
+// You can ignore the part of the code that fetches the data.
 //
-// Split it into three components:
+// Split App.js it into three components:
 // 1- App.js (existing)
 // 2- ListComponent.js: new component representing a list of items
 // 3- ListItemComponent.js: new component representing one list item.
 //
 // Create a folder "components" in the src folder to hold the new components.
 //
-// App.js should fetch the data and contain the state.
+// App.js should fetch the data and contain the state. Since it has state it is a Class Component.
 // ListComponent and ListItemComponent should be Functional Components (so they should not extend React.Component)
 // see for example: https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc
 //
 // Got extra time?
 // - make the list title flexible using a prop
-// - create a separate component for the "loading..." component
+// - create a separate component for the "loading..." text
+// - create a separate component for the "error" message
 // - display another item property in the list
 //
-// You can ignore the part of the code that fetches the data.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import React, {Component} from 'react';
 import './App.css';
