@@ -8,7 +8,7 @@ export default class FormContainer extends React.Component {
     super();
     this.state = {
       planet: "",
-      allegiance: ""
+      allegiance: "empire"
     };
   }
 
@@ -29,12 +29,12 @@ export default class FormContainer extends React.Component {
    */
   async handleSaveButton(evt) {
     evt.preventDefault();
-    console.log("handleSaveButton");
+    console.log("handleSaveButton", this.state);
     try {
       // note that fetch will handle a non 200 (ok) response not as an exception
       const response = await fetch(SAVE_PLANET_URL, {
         method: "POST",
-        body: this.state
+        body: JSON.stringify(this.state)
       });
       // do something with response, see F12 for a dump of the response object
       console.dir(response);
