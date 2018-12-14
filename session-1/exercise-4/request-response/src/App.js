@@ -12,9 +12,9 @@ import FormContainer from "./form/FormContainer";
  * - the URL for sending the data is bogus for now, could be like '/planet'
  *
  * Hints:
- * - you can use a
  * - you cannot use async and phat arrow in one go, so you will have to manually bind the 'this' context
- *   for an async function.
+ *   for an async function. Here's an example of manually binding this instead of a phat arrow declaration:
+ *   <button onClick={this.myClassMethodThatWillSendValueSomewhere.bind(this)}>save</button>
  *
  * Advanced level (if you have time left):
  * - do not allow the user to submit if the two pieces of data are not entered
