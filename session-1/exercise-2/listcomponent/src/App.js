@@ -9,7 +9,8 @@
 // 2- ListComponent.js: new component representing a list of items
 // 3- ListItemComponent.js: new component representing one list item.
 //
-// Create a folder "components" in the src folder to hold the new components.
+// A folder "components" has already been created in the src folder to hold the new components.
+// Skeletons for the new components have also been created already.
 //
 // App.js should fetch the data and contain the state. Since it has state it is a Class Component.
 // ListComponent and ListItemComponent should be Functional Components (so they should not extend React.Component)
@@ -24,6 +25,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import React, {Component} from 'react';
 import './App.css';
+
+// TODO: import ListComponent here
 
 class App extends Component {
   constructor(props) {
@@ -57,6 +60,7 @@ class App extends Component {
         }
       );
 
+  // note: this is a React component lifecycle method that gets triggered when the component is mounted in the DOM.
   componentDidMount() {
     this.getStarWarsData("/people/?search=darth");
   }
@@ -69,6 +73,7 @@ class App extends Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
+      // TODO: instead of returning the JSX div, return the ListComponent. The items should be passed to the ListComponent as a prop.
       return (
         <div>
           <h1>A Sith Lord?</h1>

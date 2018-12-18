@@ -6,6 +6,7 @@ import SpinnerComponent from "./components/SpinnerComponent";
 import ErrorComponent from "./components/ErrorComponent";
 
 class App extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -44,11 +45,11 @@ class App extends Component {
   render() {
     const {error, isLoaded, items} = this.state;
     if (error) {
-      return <ErrorComponent error = {error}/>;
+      return <ErrorComponent error={error}/>;
     } else if (!isLoaded) {
-      return <SpinnerComponent text = "Loading Star Wars Data..."/>;
+      return <SpinnerComponent text="Loading Star Wars Data..."/>;
     } else {
-      return <ListComponent data = {items} title = "A Sith Lord?"/>
+      return <ListComponent data={items} title="A Sith Lord?"/>
     }
   }
 }
